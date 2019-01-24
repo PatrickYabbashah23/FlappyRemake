@@ -1,4 +1,4 @@
-This Program is a simulation of the game app "Flappy Bird" but instead goes down instead of up; in addition to the speed pace of the gameplay being a bit faster
+//This Program is a simulation of the game app "Flappy Bird" but instead goes down instead of up; in addition to the speed pace of the gameplay being a bit faster
 
 package FlappyBird;
 
