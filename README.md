@@ -125,26 +125,25 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener{
 			columns.add(new Rectangle(columns.get(columns.size()-1).x + 600, 
 				HEIGHT - height - 120, width, height));
 			//Adds the bottom columns
-		
-    columns.add(new Rectangle(columns.get(columns.size()-1).x,
+			
+			columns.add(new Rectangle(columns.get(columns.size()-1).x,
 				0, width, HEIGHT- height - space));
 		}
 		
 	}
 	
 	//Click on the screen to start the game
-
-public void jump(){
+	
+	public void jump(){
 		if(gameOver){
-			
-			//Coordinates of the rectangle
-			//Draws and initializes the Rectangle 
 		
-    bird = new Rectangle(WIDTH / 2 - 10, HEIGHT / 2 - 10, 20, 20);
+		//Coordinates of the rectangle
+		//Draws and initializes the Rectangle 
+			
+			bird = new Rectangle(WIDTH / 2 - 10, HEIGHT / 2 - 10, 20, 20);
 			
 			//Cleares the columns
-			
-      columns.clear();
+			 columns.clear();
 			
 			yMotion = 0;
 			
@@ -374,4 +373,29 @@ public void jump(){
 	public void keyTyped(KeyEvent e) {
 		
 	}
+}
+
+
+
+//This is another class which retains everything that is within the JPanel 
+
+package FlappyBird;
+
+import java.awt.Graphics;
+
+import javax.swing.JPanel;
+
+//Retains everything from which the JPanel is in 
+
+public class Renderer extends JPanel {
+	
+	private static final long serialVersionUID = 1;
+	
+	@Override
+	protected void paintComponent(Graphics g){
+		super.paintComponent(g);
+		
+		FlappyBird.flappyBird.repaint(g);
+	}
+
 }
